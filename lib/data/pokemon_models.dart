@@ -28,11 +28,11 @@ class PokemonPage {
   const PokemonPage({required this.results, required this.next});
 
   factory PokemonPage.fromJson(Map<String, dynamic> json) => PokemonPage(
-        results: (json['results'] as List)
-            .map((e) => PokemonSummary.fromListJson(e as Map<String, dynamic>))
-            .toList(),
-        next: json['next'] as String?,
-      );
+    results: (json['results'] as List)
+        .map((e) => PokemonSummary.fromListJson(e as Map<String, dynamic>))
+        .toList(),
+    next: json['next'] as String?,
+  );
 
   final List<PokemonSummary> results;
   final String? next;

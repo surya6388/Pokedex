@@ -44,7 +44,7 @@ class FavoritesController extends ChangeNotifier {
   }
 
   Future<void> _save() => _prefs.setString(
-        _storageKey,
-        jsonEncode(_items.values.map((p) => p.toJson()).toList()),
-      );
+    _storageKey,
+    jsonEncode(_items.values.map((p) => p.toJson()).toList()),
+  );
 }

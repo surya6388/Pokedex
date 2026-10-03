@@ -38,8 +38,9 @@ class _DetailScreenState extends State<DetailScreen> {
       future: _future,
       builder: (context, snapshot) {
         final detail = snapshot.data;
-        final color =
-            detail == null ? Colors.grey : typeColor(detail.types.first);
+        final color = detail == null
+            ? Colors.grey
+            : typeColor(detail.types.first);
         return Scaffold(
           backgroundColor: color,
           appBar: AppBar(
@@ -49,9 +50,8 @@ class _DetailScreenState extends State<DetailScreen> {
             actions: [
               IconButton(
                 icon: Icon(isFav ? Icons.favorite : Icons.favorite_border),
-                onPressed: () => context
-                    .read<FavoritesController>()
-                    .toggle(widget.pokemon),
+                onPressed: () =>
+                    context.read<FavoritesController>().toggle(widget.pokemon),
               ),
             ],
           ),
@@ -98,10 +98,7 @@ class _DetailScreenState extends State<DetailScreen> {
           style: const TextStyle(color: Colors.white70),
         ),
         const SizedBox(height: 8),
-        SizedBox(
-          height: 200,
-          child: Image.network(detail.summary.artworkUrl),
-        ),
+        SizedBox(height: 200, child: Image.network(detail.summary.artworkUrl)),
         Expanded(
           child: Container(
             width: double.infinity,

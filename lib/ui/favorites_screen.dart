@@ -29,11 +29,11 @@ class FavoritesScreen extends StatelessWidget {
                 : GridView.builder(
                     gridDelegate:
                         const SliverGridDelegateWithFixedCrossAxisCount(
-                      crossAxisCount: 2,
-                      mainAxisSpacing: 12,
-                      crossAxisSpacing: 12,
-                      childAspectRatio: 0.85,
-                    ),
+                          crossAxisCount: 2,
+                          mainAxisSpacing: 12,
+                          crossAxisSpacing: 12,
+                          childAspectRatio: 0.85,
+                        ),
                     itemCount: favorites.length,
                     itemBuilder: (_, i) => PokemonCard(pokemon: favorites[i]),
                   ),
